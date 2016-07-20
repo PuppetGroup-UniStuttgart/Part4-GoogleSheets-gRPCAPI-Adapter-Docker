@@ -1,8 +1,8 @@
 FROM maven:3.3-jdk-8
 
 # Get sources
-RUN git clone --recursive https://github.com/shruthikuki/CloudLab-IAAS-UniStuttgart-Part4-gRPCGoogleSheets.git
-WORKDIR /CloudLab-IAAS-UniStuttgart-Part4-gRPCGoogleSheets
+RUN git clone --recursive https://github.com/shruthikuki/UniStuttgart-PuppetGroup-gRPCGoogleSheets.git
+WORKDIR /UniStuttgart-PuppetGroup-gRPCGoogleSheets
 
 COPY GrpcGoogleSheets.p12 /GrpcGoogleSheets.p12
 
@@ -15,4 +15,4 @@ COPY main.proto /api/main.proto
 WORKDIR /
 
 VOLUME /api
-CMD java -cp /CloudLab-IAAS-UniStuttgart-Part4-gRPCGoogleSheets/target/gRPCGoogleSheets-0.0.1-SNAPSHOT-jar-with-dependencies.jar cloudlab.ops.GoogleSheetsServer
+CMD java -cp /UniStuttgart-PuppetGroup-gRPCGoogleSheets/target/gRPCGoogleSheets-0.0.1-SNAPSHOT-jar-with-dependencies.jar cloudlab.ops.GoogleSheetsServer
