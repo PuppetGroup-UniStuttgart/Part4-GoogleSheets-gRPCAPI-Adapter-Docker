@@ -1,4 +1,6 @@
 # Part4-GoogleSheets-gRPCAPI-Adapter-Script-Docker  
 
-The docker compose runs two containers:  
-grpc container which runs the Google Grpc server and responsible for sharing the main.proto file using volumes and the other localhost container which runs the adapter server on tomcat.
+The Docker containers present in this repository perform the following functions:
+
+    grpc: Runs the Google Sheets gRPC Server and responsible for sharing the main.proto file using volumes 
+    localhost: Runs the adapter server on tomcat
